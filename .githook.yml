@@ -1,0 +1,18 @@
+title: PR Editor
+
+description: "This GitHook appends the content of your choice to any new pull request. It can be used to append coding checklists."
+
+entry_point: pr-editor.js
+
+triggered_on:
+  - pull_request
+
+scopes_required:
+  - 'repo'
+
+parameters:
+  'template':
+    title:       Template URL
+    description: "The URL to a markdown file, which will be appended to your pull request."
+    type:        url
+    required:    yes
