@@ -11,9 +11,11 @@ Someone comes along and opens a Pull Request on your HelloWorld repository and s
 This GitHook gets triggered, and in a few seconds the Pull Request description becomes:
 
 ---
+
 Pull request for that thing.
 
 - [ ] Yes, the code is good
+
 ---
 
 ## How to install
