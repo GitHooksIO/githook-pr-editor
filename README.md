@@ -23,6 +23,6 @@ On the [githook-pr-editor page on GitHooks.io](http://githooks.io/githooks/GitHo
 
 This must be a fully qualified URL pointing directly to the raw markdown, e.g.
 
-https://github.com/GitHooksIO/githook-pr-editor/blob/master/examples/coding-checklist.md
+https://raw.githubusercontent.com/GitHooksIO/githook-pr-editor/master/examples/coding-checklist.md
 
 We hope you find this useful!
