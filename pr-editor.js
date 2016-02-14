@@ -1,32 +1,38 @@
-if (PAYLOAD.action === 'opened') {
+module.exports = function (data, process) {
+    var PAYLOAD      = data.payload,
+        ACCESS_TOKEN = data.access_token,
+        GET          = data.parameters;
 
-    request.get(GET.template, function templateReceived(err, httpResponse, body) {
+    if (PAYLOAD.action === 'opened') {
 
-        var options = {
-            url:      PAYLOAD.pull_request.url,
-            headers: {
-                'Content-Type':  'application/json',
-                'User-Agent':    'pr-editor',
-                'Authorization': 'token ' + ACCESS_TOKEN
-            },
-            json: {
-                "body": PAYLOAD.pull_request.body + "\n" + body
-            }
-        };
+        request.get(GET.template, function templateReceived(err, httpResponse, body) {
 
-        console.log(options);
+            var options = {
+                url:      PAYLOAD.pull_request.url,
+                headers: {
+                    'Content-Type':  'application/json',
+                    'User-Agent':    'pr-editor',
+                    'Authorization': 'token ' + ACCESS_TOKEN
+                },
+                json: {
+                    "body": PAYLOAD.pull_request.body + "\n" + body
+                }
+            };
 
-        request.post(options, function templatePosted(err, httpResponse, body) {
-            if (err) {
-                fail('Could not send POST request: ' + err);
-            }
-            else {
-                succeed('Template POST message successful. Response:' + body);
-            }
+            console.log(options);
+
+            request.post(options, function templatePosted(err, httpResponse, body) {
+                if (err) {
+                    process.fail('Could not send POST request: ' + err);
+                }
+                else {
+                    process.succeed('Template POST message successful. Response:' + body);
+                }
+            });
+
         });
-
-    });
-}
-else {
-    succeed(PAYLOAD.action + ' (payload action) was not "opened", so there was nothing to do here.');
-}
+    }
+    else {
+        process.succeed(PAYLOAD.action + ' (payload action) was not "opened", so there was nothing to do here.');
+    }
+};
