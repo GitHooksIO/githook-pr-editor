@@ -1,3 +1,8 @@
+#EDIT
+As of 17th February 2016, GitHub now has this functionality built in natively. We suggest you start using [GitHub Issue and Pull Request Templates](https://github.com/blog/2111-issue-and-pull-request-templates) instead of this GitHook.
+
+githook-pr-editor should still continue to work, but is no longer being actively maintained.
+
 #PR Editor
 This GitHook appends the content of your choice to any new pull request.
 
