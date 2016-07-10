@@ -15,7 +15,7 @@ module.exports = function (data, process) {
                     'Authorization': 'token ' + ACCESS_TOKEN
                 },
                 json: {
-                    "body": PAYLOAD.pull_request.body + "\n" + body
+                    "body": PAYLOAD.pull_request.body + "\n" + body + "\n-----\n" + "Template automatically appended by githook-pr-editor."
                 }
             };
 
