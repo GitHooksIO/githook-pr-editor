@@ -15,4 +15,4 @@ parameters:
     title:       Template URL
     description: "The URL to a markdown file, which will be appended to your pull request."
     type:        url
-    required:    yes
+    required:    true
