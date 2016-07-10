@@ -4,6 +4,8 @@ As of 17th February 2016, GitHub now has this functionality built in natively. W
 githook-pr-editor should still continue to work, but is no longer being actively maintained.
 
 #PR Editor
+[![GitHooks.io](http://githooks.io/validate/GitHooksIO/githook-pr-editor/img)](http://githooks.io/githooks/GitHooksIO/githook-pr-editor)
+
 This GitHook appends the content of your choice to any new pull request.
 
 It can be put to all manner of uses ([see examples](https://github.com/GitHooksIO/githook-pr-editor/tree/master/examples)), but the most obvious use case is a checklist.
