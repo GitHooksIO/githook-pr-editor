@@ -16,3 +16,8 @@ parameters:
     description: "The URL to a markdown file, which will be appended to your pull request."
     type:        url
     required:    true
+  # for testing purposes only!
+  version:
+    title:       'Version 1.1'
+    description: "This parameter purely keeps track of versioning, and is used in automated tests. Please ignore"
+    type:        string
